@@ -44,3 +44,20 @@ class AppProps extends React.Component {
 }
 
 ReactDOM.render(<AppProps name="Nate"/>, document.getElementById("app-props"));
+
+class AppStyle extends React.Component {
+  render() {
+    const style = { color: "red" };
+
+    return (
+      <div>
+        <h1 style={style}>Hello { this.props.name }!</h1>
+        {
+          /* <p>This will not be rendered because it is commented out using JavaScript.</p> */
+        }
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<AppStyle name="Bill"/>, document.getElementById("app-style"));
