@@ -52,6 +52,7 @@ class AppStyle extends React.Component {
     return (
       <div>
         <h1 style={style}>Hello { this.props.name }!</h1>
+        <h2 className="primary-text">This is primary text.</h2>
         {
           /* <p>This will not be rendered because it is commented out using JavaScript.</p> */
         }
