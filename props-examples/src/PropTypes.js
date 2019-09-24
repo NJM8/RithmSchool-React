@@ -6,6 +6,7 @@ export default class Types extends Component {
     return (
       <div>
         <h1>Hello, { this.props.name }, { typeof this.props.name }</h1>
+        <h1>This one has a default value of: { this.props.value }</h1>
       </div>
     )
   }
@@ -13,4 +14,8 @@ export default class Types extends Component {
 
 Types.propTypes = {
   name: PropTypes.string
+}
+
+Types.defaultProps = {
+  value: "42"
 }
