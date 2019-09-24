@@ -1,16 +1,16 @@
 import React, { Component } from "react";
+import InstructorItem from "./InstructorItem";
 
 export default class Compose extends Component {
   render() {
     const instList = this.props.instructors.map(instructor => {
       return (
-        <li key={ instructor.id }>
-          <h1>{ instructor.name }</h1>
-          <img src={ instructor.avator } alt={ instructor.name }/>
-          <p>
-            <strong>Hobby:</strong> { instructor.hobby }
-          </p>
-        </li>
+        <InstructorItem
+         key={ instructor.id }
+         name={ instructor.name }
+         avatar={ instructor.avatar }
+         hobby={instructor.hobby }>
+        </InstructorItem>
       );
     });
 
