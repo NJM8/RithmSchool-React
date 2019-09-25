@@ -17,15 +17,9 @@ export default class Counter extends Component {
     this.state = {
       count: 1
     }
-
-    // this.addOne = this.addOne.bind(this);
-    // this.addOne = function() {
-    //   const newCount = this.state.count + 1;
-    //   this.setState({ count: newCount });
-    // }
   }
 
-  addOne() {
+  addOne = () => {
     const newCount = this.state.count + 1;
     this.setState({ count: newCount });
   }
@@ -33,7 +27,7 @@ export default class Counter extends Component {
   render() {
     return (
       <div>
-        <button onClick={ () => this.addOne() }>Add 1</button>
+        <button onClick={ this.addOne }>Add 1</button>
         <p>Count: { this.state.count }</p>
         <DoubleCount count={ this.state.count }/>
       </div>
